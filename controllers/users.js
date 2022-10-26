@@ -56,5 +56,8 @@ router.get('/profile', (req, res)=>{
     res.render('users/profile.ejs')
 })
 
+router.get('/cart', (req, res)=>{
+    res.render('shop/cart.ejs')
+})
 
 module.exports = router

@@ -1,22 +1,25 @@
 <h1>Products</h1>
 <div style="border:2px solid red ;">
     <!-- for loop on products -->
-    <% products.forEach(element => { %>
-     
-    <% }) %>
-    <div style="display: inline-block; border:2px solid royalblue; ">
-    <h4>hello</h4>   
-  </div>
-  <div style="display: inline-block; border:2px solid royalblue; ">
-    <h4>hello</h4>   
-  </div>
-  <div style="display: inline-block; border:2px solid royalblue; ">
-    <h4>hello</h4>   
-  </div>
-  <div style="display: inline-block; border:2px solid royalblue; ">
-    <h4>hello</h4>   
-  </div>
-  <div style="display: inline-block; border:2px solid royalblue; ">
-    <h4>hello</h4>   
-  </div>
-</div>
+
+    <div class="container" style="display: flex; margin: 10px; border: 5px solid blue;">
+        <% products.forEach(product => { %>
+
+        <div style="object-fit: cover; width: 500px; height: 500px; margin: 0 auto;">
+            <a href="/shop/<%= product.id %>" >
+                <img src="<%= product.bookImage %>" style="width: 200px;" alt="">
+            </a>
+        
+        <div style="border: 1px solid black">
+        <h4 style="margin:0 ; padding:0;">Name: <%= product.bookName %> </h4>
+        <h4 style="margin:0 ; padding:0;">Author: <%= product.bookAuthor %> </h4>
+        <h4 style="margin:0 ; padding:0;">Genre: <%= product.bookGenre %> </h4>
+        <h4 style="margin:0 ; padding:0;">Price: <%= product.bookPrice %>$ </h4>
+        <h4 style="margin:0 ; padding:0;">Stock: <%= product.bookStock %> </h4>
+        </div><button>Add to Cart</button>
+        </div>
+
+        <% }) %>
+    </div>
+    </div>
+    

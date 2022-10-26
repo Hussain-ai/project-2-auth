@@ -9,25 +9,25 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      itemSKU: {
+      bookName: {
         type: Sequelize.STRING
       },
-      itemName: {
+      bookAuthor: {
         type: Sequelize.STRING
       },
-      itemDesription: {
+      bookImage: {
+        type: Sequelize.TEXT
+      },
+      bookDescription: {
+        type: Sequelize.TEXT
+      },
+      bookGenre: {
         type: Sequelize.STRING
       },
-      itemGenre: {
-        type: Sequelize.STRING
-      },
-      itemImage: {
-        type: Sequelize.STRING
-      },
-      itemPrice: {
+      bookPrice: {
         type: Sequelize.INTEGER
       },
-      itemStock: {
+      bookStock: {
         type: Sequelize.INTEGER
       },
       createdAt: {
