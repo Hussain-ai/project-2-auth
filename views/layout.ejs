@@ -4,11 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="layout.css">
     <title>Express Auth</title>
 </head>
+<style>
+    nav{
+        background-color: #27ae60;;
+    }
+    #container {
+        width: 90vw;
+        height: fit-content;
+        display:flex;
+        justify-content: flex-end;
+    }
+
+    #userNav li {
+        display: inline;
+        
+    }
+</style>
 <body>
     <nav>
-        <ul>
+        <div id="container">
+        <ul id="userNav">
             <% if(user){ %>
                 <li><a href="/users/profile">Profile</a></li>
                 <li><a href="/users/logout">Logout</a></li>
@@ -16,9 +34,9 @@
                 <li><a href="/users/new">Sign Up</a></li>
                 <li><a href="/users/login">Login</a></li>
             <% } %>
+        </div>
         </ul>
     </nav>
-    <h1>Express Auth Boilerplate for Project 2</h1>
     <%- body %> 
 </body>
 </html>

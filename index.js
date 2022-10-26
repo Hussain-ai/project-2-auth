@@ -7,6 +7,7 @@ const cryptoJS = require('crypto-js')
 require('dotenv').config()
 
 // MIDDLEWARE
+app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'ejs')
 app.use(ejsLayouts)
 app.use(cookieParser())
@@ -25,12 +26,13 @@ app.use(async (req, res, next)=>{
 
 // CONTROLLERS
 app.use('/users', require('./controllers/users'))
+app.use('/shop', require('./controllers/shop'))
 
 // ROUTES
 app.get('/', (req, res)=>{
     res.render('home')
 })
 
-app.listen(8000, ()=>{
-    console.log('Project 2 Express Authentication')
+app.listen(3000, ()=>{
+    console.log('Project 2 Express Authentication port: 3000')
 })
