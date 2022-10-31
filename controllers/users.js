@@ -4,6 +4,7 @@ const router = express.Router()
 const cryptojs = require('crypto-js')
 require('dotenv').config()
 const bcrypt = require('bcrypt')
+const axios = require('axios')
 
 router.get('/new', (req, res)=>{
     res.render('users/new.ejs')
@@ -56,8 +57,20 @@ router.get('/profile', (req, res)=>{
     res.render('users/profile.ejs')
 })
 
-router.get('/cart', (req, res)=>{
-    res.render('shop/cart.ejs')
+
+
+router.get('/cart', async (req, res)=>{
+
+    // const cart = await db.order.findAll({
+    //     where: {
+    //         userId: (req.locals.user.id),
+    //         complete: false
+    //     },
+    //     include: [db.product]
+    // })
+
+
+    res.render('shop/cart.ejs', { cart: cart })
 })
 
 module.exports = router
