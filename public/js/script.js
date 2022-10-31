@@ -1,3 +1,5 @@
+app.use(express.static('public'))
+
 searchForm = document.querySelector('.search-form');
 
 document.querySelector('#search-btn').onclick = () =>{

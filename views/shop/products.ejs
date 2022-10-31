@@ -5,20 +5,22 @@
     <div class="container" style="display: flex; margin: 10px; border: 5px solid blue;">
         <% products.forEach(product => { %>
 
-        <div style="object-fit: cover; width: 500px; height: 500px; margin: 0 auto;">
-            <a href="/shop/<%= product.id %>" >
+        <div style="object-fit:contain; width: auto; height: auto; margin: 0 auto;">
+            <a href="/book<%= product.id %>" >
                 <img src="<%= product.bookImage %>" style="width: 200px;" alt="">
             </a>
-        
+            <form action="/cart/<%= product.id %>/new" method="POST">
+                <button type="submit" >Add comment</button>
         <div style="border: 1px solid black">
         <h4 style="margin:0 ; padding:0;">Name: <%= product.bookName %> </h4>
         <h4 style="margin:0 ; padding:0;">Author: <%= product.bookAuthor %> </h4>
         <h4 style="margin:0 ; padding:0;">Genre: <%= product.bookGenre %> </h4>
+        <h4 style="margin:0 ; padding:0;">Genre: <%= product.bookDescription %> </h4>
         <h4 style="margin:0 ; padding:0;">Price: <%= product.bookPrice %>$ </h4>
         <h4 style="margin:0 ; padding:0;">Stock: <%= product.bookStock %> </h4>
         </div><button>Add to Cart</button>
         </div>
-
+         </form>
         <% }) %>
     </div>
     </div>

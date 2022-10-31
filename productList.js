@@ -64,7 +64,7 @@ db.product.bulkCreate(
             "bookGenre": "Novel, Scifi",
             "bookImage": "https://i.imgur.com/bLrU3JX.jpg",
             "bookPrice": 59.99,
-            "bookStock": 5                    }
+            "bookStock": 5                    }          
     ],
    
   ).then(() => console.log("Users data have been saved"));

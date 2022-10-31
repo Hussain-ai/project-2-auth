@@ -1,0 +1,126 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    color: white;
+    stroke:black;
+    stroke-width: 1px;
+    
+}
+
+p{
+    font-size: 20px;
+}
+body{
+    background-image:url("/Background\ image.jpg");
+    background-size: cover;
+}
+#playerTurn{
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+}
+#table{
+    border:3px solid black;
+    background-color: rgb(143, 171, 196);
+    height: 480px;
+    width: 700px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+}
+.cell{
+    background-color: white;
+    margin-left: 10px;
+    display: flex;
+    width: 75px;
+    height: 75px;
+    border: 2px solid black;
+    border-radius: 50%;
+    cursor:pointer;
+}
+.cell:hover{
+    background-color: lightblue;
+}
+#resetBtn{
+    color: black;
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 24px; 
+    background-color: white;  
+    cursor:pointer; 
+    border-radius: 10%;
+}
+#redScore{
+    font-size: 24px;
+    color: red;
+}
+#yellowScore{
+    font-size: 24px;
+    color: yellow;
+}
+.color-red{
+    background-color: red;
+    background-image: url('/RedShip.png');
+    background-size: cover;
+    border-radius: 50%;
+}
+.red-piece{
+    background-color: red;
+    background-image: url('/RedShip.png');
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.color-yellow{
+    background-color: yellow;
+    background-image: url('/YellowShip.png');
+    background-size: cover;
+    border-radius: 50%;
+}
+.yellow-piece{
+    background-color: yellow;
+    background-image: url('/YellowShip.png');
+    background-size: cover;
+    border-radius: 50%;
+}
+
+#score-giver-red, #score-giver-yellow, #resetScore {
+    color: black;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 16px;
+}
+.color-green{
+    background-image:url("/Habitable_Planet.PNG");
+    background-size: cover;
+    border-radius:50%;
+}
+#music-button{
+    color: black;
+    background-color: darkgrey;
+    margin-left: -95%;
+    cursor:pointer;
+}
+
+#board{
+    height: 540px;
+    width: 630px;
+    background-color:rgba(199, 166, 166, 0.9);
+    border: 10px solid navy;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.tile {
+    height: 70px;
+    width: 70px;
+    margin: 5px;
+
+    border-radius: 50%;
+    border: 5px solid navy;
+    cursor:pointer;
+}

@@ -1,0 +1,61 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Itim', cursive;
+}
+.title {
+    color: black;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 10%;
+}
+.player{
+    text-align: center;
+}
+.background {
+    background-color: linen;
+    height:100vh;
+    padding-top: 1px;
+}
+.display{
+text-align: center;
+font-size: 24px;
+}
+#container{
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 225px;
+    margin: auto;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    font-family: "Permanent Marker", cursive;
+}
+
+.tile{
+    text-align: center;
+    width: 75px;
+    height: 75px;
+    border: 2px solid;
+    box-shadow: 0 0 0 2px;
+    line-height: 75px;
+    font-size: 50px;
+    cursor: pointer;
+}
+#status{
+    text-align: center;
+}
+#reset{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+    font-size: 20px;
+}
+.reset-mid{
+ align-items: center; 
+ padding-left: 47%; 
+}
